@@ -1,6 +1,5 @@
 [build]
   publish = "public"
-  command = "pwsh -File ../../../scripts/rewrite-public.ps1 public"
 
 [[redirects]]
   from = "/*"
