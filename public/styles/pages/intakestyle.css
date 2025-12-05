@@ -1,0 +1,155 @@
+:root{
+  /* Dark theme variables */
+  --bg:#0b1020; /* page background */
+  --card:rgba(10,14,24,0.72); /* translucent card */
+  --muted:#94a3b8; /* lighter muted text */
+  --text:#e6eef8; /* main text */
+  --accent:#06b6d4; /* teal accent */
+  --accent-2:#0891b2; /* deeper teal */
+  --focus:rgba(6,182,212,0.14);
+  --radius:14px;
+  --shadow-1:0 18px 60px rgba(2,6,23,0.6);
+}
+body{
+  background:linear-gradient(180deg,#05060a,var(--bg));
+  font-family:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  margin:0;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  color:var(--text);
+}
+/* Make sizing predictable so padding doesn't increase element width */
+*,*::before,*::after{box-sizing:border-box}
+header{
+  background:linear-gradient(90deg,var(--accent-2),var(--accent));
+  padding:28px 18px;
+  text-align:center;
+  color:#ecfeff;
+}
+header h1{margin:0;font-size:1.5rem;font-weight:700;letter-spacing:-0.5px}
+main{
+  max-width:920px;margin:28px auto;padding:28px;background:transparent;display:block
+}
+/* Card surrounding the form */
+.form-card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:var(--shadow-1);
+  border:1px solid rgba(15,23,42,0.04);
+}
+h2{text-align:center;margin-bottom:18px;font-weight:600}
+label{font-weight:600;margin-bottom:6px;color:var(--text)}
+input,textarea,select{width:100%;padding:12px 14px;border:1px solid rgba(255,255,255,0.06);border-radius:10px;background:rgba(255,255,255,0.03);color:var(--text);font-size:0.98rem;transition:box-shadow .16s,border-color .12s}
+input::placeholder,textarea::placeholder{color:rgba(230,238,248,0.45)}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 12px 40px var(--focus)}
+
+footer {
+  background-color: #0d1424;
+  color: var(--text);
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #1f2937;
+}
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.social-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+  box-shadow: 0px 4px 10px black;
+}
+.social-img:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(2,6,23,0.12)}
+.social-img:hover{transform:translateY(-4px);box-shadow:0 16px 46px rgba(6,22,34,0.6)}
+
+/* Improved form layout and styles */
+
+.form-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1rem}
+@media(max-width:720px){.form-row{grid-template-columns:1fr}}
+.form-group{display:flex;flex-direction:column;gap:.35rem}
+.form-group label{font-weight:600;color:var(--text)}
+.form-group input,.form-group textarea{padding:.9rem 12px;border:1px solid #e6eaf0;border-radius:10px;font-size:1rem;outline:none;transition:box-shadow .16s,border-color .12s;padding-left:44px}
+.form-group input,.form-group textarea{padding:.9rem 12px;border:1px solid rgba(255,255,255,0.06);border-radius:10px;font-size:1rem;outline:none;transition:box-shadow .16s,border-color .12s;padding-left:44px;background:rgba(255,255,255,0.02);color:var(--text)}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 10px 30px var(--focus)}
+
+/* ensure inputs don't overflow when using width:100% + padding */
+.form-group input,.form-group textarea{min-height:44px;line-height:1.2}
+
+.form-group input:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 18px 44px var(--focus)}
+.form-actions{display:flex;align-items:center;gap:12px;margin-top:18px}
+.btn{background:linear-gradient(180deg,var(--accent),var(--accent-2));color:#fff;padding:.75rem 1.15rem;border-radius:12px;border:0;font-weight:700;cursor:pointer;box-shadow:0 8px 26px rgba(37,99,235,0.18);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(29,78,216,0.18)}
+.form-status{margin-top:1rem;padding:.8rem 1rem;border-radius:10px;background:linear-gradient(180deg, rgba(6,182,212,0.08), rgba(6,182,212,0.04));color:var(--text);border:1px solid rgba(6,182,212,0.12)}
+input[aria-invalid="true"]{border-color:#ef4444;box-shadow:0 0 0 4px rgba(239,68,68,0.06)}
+
+.back-link{color:var(--muted);text-decoration:none;font-weight:600}
+
+.hint{font-size:.9rem;color:var(--muted);margin-top:8px}
+
+/* input-with-icon helpers */
+.input-with-icon{position:relative}
+.input-with-icon .input-icon{position:absolute;left:12px;top:50%;transform:translateY(calc(-50% + 3px));color:rgba(230,238,248,0.45);display:inline-flex;align-items:center;justify-content:center;transition:transform .18s ease,opacity .18s ease,color .18s;z-index:1;pointer-events:none}
+.input-with-icon .icon-svg{display:block;stroke:currentColor}
+.input-with-icon:focus-within .input-icon{transform:translateY(calc(-50% + 3px)) translateX(-6px);color:var(--accent)}
+
+/* keep input content above the icon */
+.input-with-icon input,.input-with-icon textarea{position:relative;z-index:2}
+
+/* prevent grid children from overflowing in two-column layout */
+.form-row > .form-group { min-width: 0; }
+
+/* subtle entry animation */
+@keyframes floatIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.form-card{animation:floatIn .35s ease both}
+
+/* submit button success animation (pulse) */
+.btn.success{animation:btnSuccess .9s ease both}
+@keyframes btnSuccess{0%{transform:scale(1);box-shadow:0 8px 26px rgba(37,99,235,0.18)}50%{transform:scale(1.03);box-shadow:0 18px 46px rgba(37,99,235,0.22)}100%{transform:scale(1);box-shadow:0 8px 26px rgba(37,99,235,0.18)}}
+
+/* status message entrance */
+.form-status.show{animation:popIn .28s ease both}
+@keyframes popIn{from{opacity:0;transform:translateY(6px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+/* stronger visual pop + decorative blobs */
+.form-card{
+  box-shadow:0 28px 80px rgba(2,6,23,0.12);
+  background: var(--card);
+  border:1px solid rgba(15,23,42,0.05);
+  backdrop-filter: blur(6px);
+}
+
+.accent-blob{position:absolute;border-radius:50%;filter:blur(36px);opacity:.7;pointer-events:none;z-index:0}
+.blob-1{width:320px;height:320px;left:-80px;top:-60px;background:radial-gradient(circle at 30% 30%, rgba(37,99,235,0.18), rgba(29,78,216,0.06) 40%, transparent 60%)}
+.blob-2{width:220px;height:220px;right:-60px;bottom:-60px;background:radial-gradient(circle at 70% 30%, rgba(99,102,241,0.12), rgba(139,92,246,0.04) 40%, transparent 60%)}
+
+/* ensure card content sits above blobs */
+.form-card{position:relative;z-index:2}
+
+/* stronger input focus glow */
+.form-group input:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 22px 56px rgba(37,99,235,0.14)}
+
+/* button checkmark micro-animation using ::after */
+.btn{position:relative}
+.btn.success::after{content:'✓';position:relative;display:inline-block;margin-left:.6rem;font-weight:800;transform:scale(0);opacity:0;color:#fff}
+.btn.success{animation:btnSuccess .9s ease both}
+.btn.success::after{animation:checkPop .36s .12s forwards}
+@keyframes checkPop{0%{transform:scale(0);opacity:0}60%{transform:scale(1.15);opacity:1}100%{transform:scale(1);opacity:1}}
+
+/* floating micro-movement on hover for blobs */
+.accent-blob{transition:transform .8s ease,opacity .6s ease}
+.form-card:hover ~ .blob-1{transform:translateY(-6px) translateX(6px)}
+.form-card:hover ~ .blob-2{transform:translateY(6px) translateX(-6px)}
+
+/* prefers reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .form-card,.accent-blob,.btn,.btn.success,.form-status{animation:none!important;transition:none!important}
+}
+
+
