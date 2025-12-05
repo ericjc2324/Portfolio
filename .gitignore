@@ -1,2 +1,1 @@
-# Ignore the generated public folder
-public/
+# Public folder is needed for deployment

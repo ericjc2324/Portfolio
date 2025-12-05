@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Acme Headphones product landing page - A beginner HTML/CSS project showcasing layout, styling, and responsive design skills.">
+    <title>Acme Headphones - Product Landing Page</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/pages/productstyle.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Header / Nav -->
+    <header class="lp-header">
+      <nav class="lp-nav" aria-label="Primary">
+        <a class="lp-brand" href="portfolio.html">← Portfolio</a>
+        <ul class="lp-navlist">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+        <a class="lp-cta-btn" href="#pricing">Buy Now</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="lp-hero" aria-label="Intro">
+        <div class="lp-hero-inner">
+          <h1>Acme Wireless Headphones</h1>
+          <p>Immersive sound. All-day comfort. 40-hour battery life.</p>
+          <a class="lp-cta-btn lp-cta-btn--lg" href="#pricing">Get Yours</a>
+        </div>
+        <!-- Replace with your actual image path -->
+        <img
+          class="lp-hero-img"
+          src="assets/images/white-headphones-matte.webp"
+          alt="Acme Wireless Headphones in matte white"
+        />
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="lp-section">
+        <h2>Features</h2>
+        <div class="lp-features">
+          <article class="lp-feature">
+            <h3>Active Noise Cancelling</h3>
+            <p>Block out distractions with premium ANC.</p>
+          </article>
+          <article class="lp-feature">
+            <h3>40-Hour Battery</h3>
+            <p>Charge once, listen for days.</p>
+          </article>
+          <article class="lp-feature">
+            <h3>Ultra-Light Comfort</h3>
+            <p>Featherweight fit for long sessions.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section id="gallery" class="lp-section">
+        <h2>Gallery</h2>
+        <div class="lp-gallery">
+          <img src="assets/images/headphones-desk.jpg" alt="Headphones on desk" />
+          <img
+            src="assets/images/headphones-side.jpg"
+            alt="Headphones side profile"
+          />
+          <img
+            src="assets/images/headphones-case.jpg"
+            alt="Headphones in carry case"
+          />
+        </div>
+      </section>
+
+      <!-- Pricing / CTA -->
+      <section id="pricing" class="lp-section lp-pricing">
+        <h2>Pricing</h2>
+        <div class="lp-card">
+          <h3>Standard</h3>
+          <p class="lp-price">$149</p>
+          <ul class="lp-list">
+            <li>ANC + Transparency</li>
+            <li>40-hour battery</li>
+            <li>USB-C fast charging</li>
+          </ul>
+          <a class="lp-cta-btn lp-cta-btn--full" href="#">Add to Cart</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="lp-footer">
+      <p>&copy; 2025 Eric's Portfolio | <a href="portfolio.html" style="color: #06b6d4; text-decoration: none;">View More Projects</a></p>
+    </footer>
+  </body>
+</html>
+
