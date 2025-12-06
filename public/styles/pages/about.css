@@ -55,6 +55,18 @@ header h1 {
   box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
 }
 
+.nav-buttons a.active {
+  background: rgba(6, 182, 212, 0.2);
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  cursor: default;
+}
+
+.nav-buttons a.active:hover {
+  transform: none;
+  box-shadow: none;
+}
+
 /* Main content */
 main {
   max-width: 800px;
