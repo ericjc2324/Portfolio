@@ -162,3 +162,48 @@ footer {
   border-top: 1px solid #1f2937;
   margin-top: auto;
 }
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    padding: 30px 15px;
+  }
+
+  main {
+    padding: 30px 15px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .nav-buttons {
+    gap: 10px;
+  }
+
+  .nav-buttons a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    padding: 20px;
+  }
+
+  .nav-buttons a {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+
+  .skills-tags {
+    gap: 6px;
+  }
+
+  .skill-tag {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+}
