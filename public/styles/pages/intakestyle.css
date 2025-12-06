@@ -2,8 +2,8 @@
   /* Dark theme variables */
   --bg: #0b1020; /* page background */
   --card: rgba(10, 14, 24, 0.72); /* translucent card */
-  --muted: #94a3b8; /* lighter muted text */
-  --text: #e6eef8; /* main text */
+  --muted: #8694a8; /* lighter muted text */
+  --text: #c5d1e0; /* main text */
   --accent: #06b6d4; /* teal accent */
   --accent-2: #0891b2; /* deeper teal */
   --focus: rgba(6, 182, 212, 0.14);
@@ -50,22 +50,33 @@ header h1 {
 }
 
 .nav-buttons a {
-  background: linear-gradient(135deg, var(--accent-2), var(--accent));
-  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
   padding: 10px 20px;
   border-radius: 20px;
   text-decoration: none;
   font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-buttons a:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-buttons a:active {
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .nav-buttons a.active {
-  background: rgba(6, 182, 212, 0.2);
+  background: rgba(6, 182, 212, 0.15);
   border: 2px solid var(--accent);
   color: var(--accent);
   cursor: default;
@@ -163,9 +174,64 @@ footer {
   gap: 1rem;
   margin-bottom: 1rem;
 }
+
+/* Tablet landscape (1024px and below) */
+@media (max-width: 1024px) {
+  main {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .form-card {
+    padding: 24px;
+  }
+}
+
+/* Tablet portrait and mobile (720px and below) */
 @media (max-width: 720px) {
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+
+  .nav-buttons {
+    gap: 10px;
+  }
+
+  .nav-buttons a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile (480px and below) */
+@media (max-width: 480px) {
+  header {
+    padding: 30px 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .form-card {
+    padding: 16px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .btn {
+    width: 100%;
   }
 }
 .form-group {
@@ -233,10 +299,16 @@ footer {
   cursor: pointer;
   box-shadow: 0 8px 26px rgba(37, 99, 235, 0.18);
   transition: transform 0.12s, box-shadow 0.12s;
+  min-height: 48px;
+  min-width: 120px;
 }
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 16px 40px rgba(29, 78, 216, 0.18);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.18);
 }
 .form-status {
   margin-top: 1rem;

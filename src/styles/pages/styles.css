@@ -15,7 +15,7 @@
 
 body {
   background: linear-gradient(180deg, #05060a, #0b1020);
-  color: #e6eef8;
+  color: #c5d1e0;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Arial, sans-serif;
   margin: 0;
@@ -57,16 +57,18 @@ body {
   position: relative;
   color: white;
   z-index: 2;
-  font-size: 48px;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-bottom: 16px;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 800;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
 }
 .hero-subtitle {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.25rem;
-  margin-bottom: 32px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  font-weight: 500;
 }
 .hero-buttons {
   display: flex;
@@ -86,22 +88,27 @@ body {
 }
 .cta-button.primary {
   background: linear-gradient(135deg, #06b6d4, #0891b2);
-  box-shadow: 0 4px 14px rgba(6, 182, 212, 0.4);
+  box-shadow: 0 6px 24px rgba(6, 182, 212, 0.5);
+  padding: 18px 48px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transform: scale(1.05);
 }
 .cta-button.primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.6);
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 8px 32px rgba(6, 182, 212, 0.7);
   background: linear-gradient(135deg, #0891b2, #06b6d4);
 }
 .cta-button.secondary {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.95);
 }
 .cta-button.secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
@@ -110,6 +117,13 @@ main {
   background-color: transparent;
   padding: 60px 20px;
   text-align: center;
+}
+
+main h3 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: #e6eef8;
+  margin-bottom: 30px;
 }
 .video-grid {
   display: grid;
@@ -124,6 +138,7 @@ main {
   border-radius: 10px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
   background-color: #0b1020;
+  aspect-ratio: 16 / 9;
 }
 footer {
   background-color: #0d1424;
@@ -188,10 +203,18 @@ footer {
   box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   font-size: 0.9375rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .nav-buttons a:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+}
+.nav-buttons a:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(6, 182, 212, 0.3);
 }
 .nav-buttons a:focus-visible {
   outline: 3px solid #000;
@@ -214,38 +237,19 @@ footer {
   }
 }
 
-/* Ensure header text is visible on dark theme */
-.site-header {
-  padding: 60px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.site-header h2 {
-  color: #e6eef8;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  margin-bottom: 16px;
-  font-weight: 700;
-}
-
-.site-header p {
-  color: #94a3b8;
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  max-width: 700px;
-  margin: 0 auto;
-}
-
 /* Skills section */
 #skills {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #skills h2 {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   color: #e6eef8;
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
-  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
+  text-align: center;
 }
 
 .skills-grid {
@@ -262,6 +266,35 @@ footer {
   border-radius: 12px;
   padding: 28px;
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card.featured-skill {
+  grid-column: span 2;
+  background: var(--card);
+  border: 3px solid rgba(6, 182, 212, 0.6);
+  box-shadow: 0 8px 32px rgba(6, 182, 212, 0.2);
+  transform: scale(1.05);
+}
+
+.skill-card.featured-skill .skill-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.skill-card.featured-skill h3 {
+  font-size: 1.5rem;
+  color: #0891b2;
+}
+
+.skill-card.featured-skill p {
+  font-size: 1.0625rem;
+  color: #cbd5e1;
+}
+
+@media (max-width: 768px) {
+  .skill-card.featured-skill {
+    grid-column: span 1;
+  }
 }
 
 .skill-card:hover {
@@ -297,12 +330,32 @@ footer {
 
 .skill-card p {
   margin: 0;
-  color: #94a3b8;
+  color: #8694a8;
   font-size: 0.9375rem;
   line-height: 1.5;
 }
 
 /* Mobile responsive adjustments */
+
+/* Tablet landscape / Small desktop (1024px and below) */
+@media (max-width: 1024px) {
+  .hero {
+    height: 450px;
+  }
+
+  .nav-buttons {
+    position: static;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  main {
+    padding: 50px 20px;
+  }
+}
+
+/* Tablet portrait (768px and below) */
 @media (max-width: 768px) {
   .hero {
     height: 400px;
@@ -319,6 +372,12 @@ footer {
   .cta-button {
     padding: 14px 32px;
     font-size: 1rem;
+    min-height: 44px;
+    min-width: 120px;
+  }
+
+  .cta-button:active {
+    transform: scale(0.98);
   }
 
   main {
