@@ -191,22 +191,27 @@ footer p {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 15px;
 }
 
 .social-links a {
-  transition: transform 0.3s ease, filter 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--text);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover {
-  transform: translateY(-4px) scale(1.1);
-  filter: brightness(1.2);
+  transform: translateY(-3px);
+  color: var(--accent);
 }
 
-.social-img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+.social-links svg {
+  width: 24px;
+  height: 24px;
 }
 
 /* Mobile responsive adjustments */

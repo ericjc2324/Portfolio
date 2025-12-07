@@ -242,6 +242,34 @@ footer {
   margin-top: auto;
 }
 
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--text);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  color: var(--accent);
+}
+
+.social-links svg {
+  width: 24px;
+  height: 24px;
+}
+
 /* Mobile responsive adjustments */
 
 /* Tablet landscape (1024px and below) */
