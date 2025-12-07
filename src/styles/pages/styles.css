@@ -240,8 +240,12 @@ footer {
   justify-content: center;
   width: 44px;
   height: 44px;
-  color: var(--text);
+  color: #c5d1e0;
   transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:visited {
+  color: #c5d1e0;
 }
 
 .social-links a:hover {
@@ -252,6 +256,7 @@ footer {
 .social-links svg {
   width: 24px;
   height: 24px;
+  fill: currentColor;
 }
 .social-img:hover {
   transform: translateY(-3px);
