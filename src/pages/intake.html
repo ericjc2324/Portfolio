@@ -54,6 +54,8 @@
                 name="firstname"
                 type="text"
                 autocomplete="given-name"
+                pattern="[A-Za-z\s\-']+"
+                title="Please enter letters only."
                 placeholder="Jane"
                 required
               />
@@ -94,6 +96,8 @@
                 autocomplete="family-name"
                 placeholder="Doe"
                 required
+                pattern="[A-Za-z\s\-']+"
+                title="Please enter letters only."
               />
               <span class="input-icon" aria-hidden="true">
                 <!-- person icon (smaller) -->
