@@ -62,35 +62,66 @@
         </article>
 
         <article class="project-card">
-          <h3>Project Three</h3>
+          <h3>More Projects Coming Soon</h3>
           <p>
-            A brief description of this project. This showcases the technologies
-            and skills used to build it.
+            Currently working on new projects to add to my portfolio. Check back soon for updates on my latest work!
           </p>
           <div class="skills-tags">
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">In Progress</span>
           </div>
-          <a href="#" class="project-link">View Project →</a>
         </article>
 
         <article class="project-card">
-          <h3>Project Four</h3>
+          <h3>More Projects Coming Soon</h3>
           <p>
-            A brief description of this project. This showcases the technologies
-            and skills used to build it.
+            Building exciting new projects to showcase. Stay tuned for more web development work!
           </p>
           <div class="skills-tags">
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Coming Soon</span>
           </div>
-          <a href="#" class="project-link">View Project →</a>
         </article>
       </div>
     </main>
     <footer>
-      <p>&copy; 2025 Eric's Portfolio</p>
+      <p>&copy; 2025 Eric's Portfolio. All rights reserved.</p>
+      <div class="social">
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61584466422615" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/Facebook.jpg" alt="Facebook — My profile" class="social-img" />
+          </a>
+          <a href="https://www.linkedin.com/in/eric-cunningham-319603393/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/LinkedIn.png" alt="LinkedIn — My profile" class="social-img" />
+          </a>
+          <a href="https://x.com/EricFSD1" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/X_logo.jpg" alt="X / Twitter — My profile" class="social-img" />
+          </a>
+          <a href="https://github.com/ericjc2324" target="_blank" rel="noopener noreferrer">
+            <img src="assets/images/GitHub.png" alt="GitHub — My repositories" class="social-img" />
+          </a>
+        </div>
+      </div>
     </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    
+    <script>
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
   </body>
 </html>
 

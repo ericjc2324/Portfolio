@@ -39,36 +39,32 @@
     </div>
     <!--Main Content Section-->
     <main id="main">
-      <h3>Featured Content</h3>
-      <div class="video-grid">
-        <iframe
-          src="https://www.youtube.com/embed/8pDqJVdNa44?si=-IZWXAMTF5FxC8iK"
-          title="YouTube video 1"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          src="https://www.youtube.com/embed/RGWXVbkrYKM"
-          title="YouTube video 2"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          src="https://www.youtube.com/embed/Hk23s6MIFVc?si=TJpMvDb6CyKrw69w"
-          title="YouTube video 3"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          src="https://www.youtube.com/embed/AmHEfTSBXiY?si=gQ960nHfhn-bfq7n"
-          title="YouTube video 4"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+      <h3>Featured Projects</h3>
+      <div class="project-showcase">
+        <article class="showcase-card">
+          <div class="showcase-image">
+            <img src="../assets/images/headphones-desk.jpg" alt="Acme Headphones landing page" loading="lazy" />
+          </div>
+          <div class="showcase-content">
+            <h4>Acme Headphones</h4>
+            <p>Responsive product landing page with modern design and smooth animations.</p>
+            <a href="https://github.com/ericjc2324/acme-headphones" target="_blank" rel="noopener noreferrer" class="showcase-link">View Project →</a>
+          </div>
+        </article>
+
+        <article class="showcase-card">
+          <div class="showcase-image">
+            <img src="../assets/images/CodingImage.jpg" alt="Restaurant menu website" loading="lazy" />
+          </div>
+          <div class="showcase-content">
+            <h4>Sizzling Nebula Diner</h4>
+            <p>Cosmic-themed restaurant menu with optimized images and dark space aesthetic.</p>
+            <a href="https://github.com/ericjc2324/restaurant-menu" target="_blank" rel="noopener noreferrer" class="showcase-link">View Project →</a>
+          </div>
+        </article>
+      </div>
+      <div class="view-all-projects">
+        <a href="portfolio.html" class="cta-button secondary">View All Projects</a>
       </div>
     </main>
 
@@ -214,7 +210,7 @@
     </section>
     <!--Footer Section-->
     <footer>
-      <p>&copy; 2025 Eric's Portfolio</p>
+      <p>&copy; 2025 Eric's Portfolio. All rights reserved.</p>
       <div class="social">
         <div class="social-links">
           <a
@@ -264,5 +260,29 @@
         </div>
       </div>
     </footer>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    
+    <script>
+      // Back to top button functionality
+      const backToTop = document.getElementById('backToTop');
+      
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+      
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
   </body>
 </html>
