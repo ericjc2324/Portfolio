@@ -1,6 +1,0 @@
-
-<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="800" fill="#000000"/>
-  <rect x="120" y="120" width="560" height="560" fill="none" stroke="#BA965A" stroke-width="12"/>
-  <text x="50%" y="53%" font-family="Arial, sans-serif" font-size="260" fill="#F0EBDC" dominant-baseline="middle" text-anchor="middle">EC</text>
-</svg>
