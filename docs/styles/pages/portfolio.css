@@ -37,6 +37,12 @@ body {
   justify-content: flex-start;
 }
 
+/* Page-specific small spacing tweak to ensure logo sits close to nav */
+.site-header .header-logo,
+.header-logo {
+  margin-right: 12px;
+}
+
 header {
   background: var(--card);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
