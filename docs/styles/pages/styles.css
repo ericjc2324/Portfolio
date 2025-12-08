@@ -282,43 +282,45 @@ footer {
   margin: 0;
 }
 .nav-buttons {
-  position: absolute;
-  top: 24px;
-  right: 20px;
-  z-index: 5; /* ensure above hero overlay */
+  position: static;
   display: flex;
-  gap: 15px;
+  gap: 12px;
+  align-items: center;
+  margin-left: 8px;
 }
 .nav-buttons a {
-  background: linear-gradient(135deg, #0891b2, #06b6d4);
-  color: #fff;
-  padding: 10px 20px;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.95);
+  padding: 8px 16px;
   border-radius: 20px;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-size: 0.9375rem;
-  min-height: 44px;
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  font-size: 0.95rem;
+  min-height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 .nav-buttons a:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+  background: rgba(255,255,255,0.12);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 .nav-buttons a:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(6, 182, 212, 0.3);
+  box-shadow: none;
 }
 .nav-buttons a:focus-visible {
-  outline: 3px solid #000;
+  outline: 3px solid rgba(6,182,212,0.2);
   outline-offset: 2px;
 }
-.nav-buttons a:active {
-  transform: translateY(0);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+.nav-buttons a.active {
+  background: rgba(6,182,212,0.15);
+  border: 2px solid #06b6d4;
+  color: #06b6d4;
+  cursor: default;
 }
 @media (max-width: 480px) {
   .nav-buttons {
