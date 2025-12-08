@@ -303,6 +303,13 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+/* Keep header/logo a consistent, reasonable size on published site */
+.site-header .header-logo img {
+  height: 40px !important;
+  width: auto !important;
+  max-width: 160px !important;
+}
 .nav-buttons a:hover {
   transform: translateY(-2px);
   background: rgba(255,255,255,0.12);

@@ -220,6 +220,13 @@ h2 {
   text-decoration: underline;
 }
 
+/* Ensure header logo stays a reasonable size across pages */
+.site-header .header-logo img {
+  height: 40px !important;
+  width: auto !important;
+  max-width: 160px !important;
+}
+
 footer {
   background-color: #0d1424;
   color: var(--text);
@@ -285,15 +292,20 @@ footer {
     border-bottom: 1px solid rgba(255,255,255,0.1) !important;
     padding: 24px 32px 24px 32px !important;
     min-height: 64px !important;
+  }
 
   .project-grid {
     grid-template-columns: 1fr;
-    display: flex !important;
-    align-items: center !important;
+    display: block !important;
+    align-items: stretch !important;
     margin-right: 24px !important;
+  }
+
   .nav-buttons {
     gap: 10px;
   }
+
+  .header-logo {
     max-width: 48px !important;
     height: auto !important;
     margin-right: 20px !important;
