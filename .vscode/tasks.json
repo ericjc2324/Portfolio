@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Copy images to src/assets/images",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"Copy-Item -Path \"C:\\Users\\Eric\\CodePrac\\Portfolio\\imgs\\*\" -Destination \"C:\\Users\\Eric\\CodePrac\\src\\assets\\images\" -Force; Copy-Item -Path \"C:\\Users\\Eric\\CodePrac\\Images\\*\" -Destination \"C:\\Users\\Eric\\CodePrac\\src\\assets\\images\" -Force"
+			],
+			"isBackground": false,
+			"group": "build"
+		}
+		,
+		{
+			"label": "Sync public from src (portfolio)",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"New-Item -ItemType Directory -Path \"${workspaceFolder}\\Projects\\portfolio\\public\\styles\\pages\" -Force; New-Item -ItemType Directory -Path \"${workspaceFolder}\\Projects\\portfolio\\public\\assets\\images\" -Force; Copy-Item -Path \"${workspaceFolder}\\Projects\\portfolio\\src\\pages\\*.html\" -Destination \"${workspaceFolder}\\Projects\\portfolio\\public\" -Force; Copy-Item -Path \"${workspaceFolder}\\Projects\\portfolio\\src\\styles\\base.css\" -Destination \"${workspaceFolder}\\Projects\\portfolio\\public\\styles\" -Force; Copy-Item -Path \"${workspaceFolder}\\Projects\\portfolio\\src\\styles\\pages\\*.css\" -Destination \"${workspaceFolder}\\Projects\\portfolio\\public\\styles\\pages\" -Force; Copy-Item -Path \"${workspaceFolder}\\Projects\\portfolio\\src\\assets\\images\\*\" -Destination \"${workspaceFolder}\\Projects\\portfolio\\public\\assets\\images\" -Force; & \"${workspaceFolder}\\scripts\\rewrite-public.ps1\" \"${workspaceFolder}\\Projects\\portfolio\\public\""
+			],
+			"isBackground": false,
+			"group": "build"
+		}
+	]
+}
