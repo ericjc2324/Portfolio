@@ -1,4 +1,49 @@
 /* Base shared styles: variables, resets, utilities */
+:root {
+  /* ...existing variables... */
+}
+
+
+.site-header {
+  display: flex;
+  align-items: center;
+  background: var(--card, #0b1020);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 24px 32px 24px 32px;
+  min-height: 64px;
+}
+
+.site-header .header-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.site-header .header-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.header-logo img {
+  max-width: 48px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.header-logo img {
+  max-width: 48px;
+  height: auto;
+  margin-right: 20px;
+}
 
 :root {
   --font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial,

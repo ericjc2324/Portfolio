@@ -21,19 +21,6 @@ body {
   flex-direction: column;
 }
 
-header {
-  background: var(--card);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 40px 20px;
-  text-align: center;
-}
-
-header h1 {
-  color: var(--accent);
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin: 0 0 20px 0;
-  font-weight: 700;
-}
 
 /* Navigation buttons matching about page */
 .nav-buttons {
@@ -292,24 +279,24 @@ footer {
 /* Tablet portrait (768px and below) */
 @media (max-width: 768px) {
   header {
-    padding: 30px 15px;
-  }
-
-  main {
-    padding: 30px 15px;
-  }
+    display: flex !important;
+    align-items: center !important;
+    background: var(--card, #0b1020) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    padding: 24px 32px 24px 32px !important;
+    min-height: 64px !important;
 
   .project-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
+    display: flex !important;
+    align-items: center !important;
+    margin-right: 24px !important;
   .nav-buttons {
     gap: 10px;
   }
-
-  .nav-buttons a {
-    padding: 8px 16px;
+    max-width: 48px !important;
+    height: auto !important;
+    margin-right: 20px !important;
     font-size: 0.9rem;
   }
 }

@@ -10,6 +10,35 @@
   --radius: 14px;
   --shadow-1: 0 18px 60px rgba(2, 6, 23, 0.6);
 }
+
+.site-header {
+  display: flex;
+  align-items: center;
+  background: var(--card, #0b1020);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 24px 32px 24px 32px;
+  min-height: 64px;
+}
+
+.site-header .header-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.site-header .header-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.header-logo img {
+  max-width: 48px;
+  height: auto;
+  margin-right: 20px;
+}
 body {
   background: linear-gradient(180deg, #05060a, var(--bg));
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
@@ -25,19 +54,6 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
-}
-header {
-  background: var(--card);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 40px 20px;
-  text-align: center;
-}
-
-header h1 {
-  color: var(--accent);
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin: 0 0 20px 0;
-  font-weight: 700;
 }
 
 /* Navigation buttons matching other pages */
@@ -221,24 +237,24 @@ footer {
 /* Small mobile (480px and below) */
 @media (max-width: 480px) {
   header {
-    padding: 30px 15px;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
+    display: flex !important;
+    align-items: center !important;
+    background: var(--card, #0b1020) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    padding: 24px 32px 24px 32px !important;
+    min-height: 64px !important;
 
   main {
     padding: 15px;
-  }
-
-  .form-card {
+    display: flex !important;
+    align-items: center !important;
+    margin-right: 24px !important;
     padding: 16px;
   }
 
-  .form-group input,
-  .form-group textarea {
-    font-size: 16px; /* Prevents zoom on iOS */
+    max-width: 48px !important;
+    height: auto !important;
+    margin-right: 20px !important;
   }
 
   .btn {
