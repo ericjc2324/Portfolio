@@ -21,6 +21,22 @@ body {
   flex-direction: column;
 }
 
+/* Ensure header contents align horizontally: logo left, nav buttons to its right */
+.site-header > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 16px;
+}
+
+.site-header .nav-buttons {
+  position: static !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 header {
   background: var(--card);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -39,7 +55,7 @@ header h1 {
 .nav-buttons {
   display: flex;
   gap: 15px;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 0;
 }
