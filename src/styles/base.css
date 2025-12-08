@@ -16,7 +16,7 @@
 .site-header .header-logo {
   display: flex;
   align-items: center;
-  margin-right: 24px;
+  margin-right: 12px;
 }
 
 .site-header .header-content {
@@ -36,13 +36,13 @@
 .header-logo {
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 12px;
 }
 
 .header-logo img {
   max-width: 48px;
   height: auto;
-  margin-right: 20px;
+  margin-right: 12px;
 }
 
 :root {
